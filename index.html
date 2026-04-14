@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PRIMARY SEO -->
+  <title>Melyka — Purchasing & Sekretaris Profesional | Jakarta</title>
+  <meta name="description" content="Portfolio profesional Melyka, tenaga purchasing dan sekretaris berpengalaman di industri F&B kawasan PIK2, Jakarta. Terampil dalam pengadaan barang, administrasi perkantoran, dan manajemen vendor.">
+  <meta name="keywords" content="Melyka, purchasing staff, sekretaris profesional, administrasi perkantoran, F&B purchasing, PIK2, Jakarta, portfolio kerja, pengadaan barang, vendor management">
+  <meta name="author" content="Melyka">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Melyka Portfolio">
+  <meta property="og:title" content="Melyka — Purchasing & Sekretaris Profesional | Jakarta">
+  <meta property="og:description" content="Portfolio profesional Melyka, tenaga purchasing dan sekretaris berpengalaman di industri F&B kawasan PIK2, Jakarta.">
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/">
+  <meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/assets/photo-1.jpg">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Melyka — Purchasing & Sekretaris Profesional">
+  <meta name="twitter:description" content="Portfolio profesional Melyka, tenaga purchasing & sekretaris di F&B PIK2, Jakarta.">
+  <meta name="twitter:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO/assets/photo-1.jpg">
+
+  <!-- STRUCTURED DATA JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Melyka",
+    "jobTitle": ["Purchasing Staff", "Sekretaris"],
+    "description": "Tenaga purchasing dan sekretaris profesional berpengalaman di industri F&B, berdomisili di Jakarta.",
+    "url": "https://YOUR-USERNAME.github.io/YOUR-REPO/",
+    "image": "https://YOUR-USERNAME.github.io/YOUR-REPO/assets/photo-1.jpg",
+    "address": { "@type": "PostalAddress", "addressLocality": "Jakarta", "addressCountry": "ID" },
+    "knowsAbout": ["Purchasing", "Procurement", "Administrasi Perkantoran", "Manajemen Vendor", "Sekretaris", "F&B Industry"],
+    "alumniOf": { "@type": "EducationalOrganization", "name": "SMK", "department": "Administrasi Perkantoran" }
+  }
+  </script>
+
+  <!-- PERFORMANCE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --rose:    #f4a7b9;
+      --rose-lt: #fce8ef;
+      --blush:   #fdf0f4;
+      --sand:    #fdf9f6;
+      --sage:    #d4e3d0;
+      --sage-lt: #eef5ec;
+      --mauve:   #c9a8b8;
+      --mauve-dk:#8a5f74;
+      --text:    #3d2b35;
+      --muted:   #9b7d8a;
+      --dark:    #2a1e24;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--blush);
+      color: var(--text);
+      cursor: none;
+      overflow-x: hidden;
+    }
+
+    /* Cursor */
+    .cursor {
+      width: 10px; height: 10px;
+      background: var(--rose);
+      border-radius: 50%;
+      position: fixed; top: 0; left: 0;
+      pointer-events: none; z-index: 9999;
+      transform: translate(-50%, -50%);
+    }
+    .cursor-ring {
+      width: 34px; height: 34px;
+      border: 1.5px solid var(--rose);
+      border-radius: 50%;
+      position: fixed; top: 0; left: 0;
+      pointer-events: none; z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s, height 0.2s;
+    }
+
+    /* Typography */
+    .font-display { font-family: 'Cormorant Garamond', serif; }
+
+    /* Blobs */
+    .blob {
+      position: absolute; border-radius: 50%;
+      filter: blur(55px); opacity: 0.35;
+      pointer-events: none; z-index: 0;
+    }
+
+    /* Nav */
+    .glass-nav {
+      background: rgba(253, 240, 244, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(244, 167, 185, 0.2);
+    }
+
+    /* Pills */
+    .pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 4px 14px; border-radius: 999px;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.05em;
+      background: var(--rose-lt); color: var(--mauve-dk);
+      border: 1px solid rgba(244, 167, 185, 0.45);
+    }
+
+    /* Photo placeholder — REMOVE & REPLACE WITH <img> */
+    .photo-wrap {
+      border-radius: 1.75rem; overflow: hidden;
+      position: relative;
+    }
+    .photo-placeholder {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 10px;
+      background: linear-gradient(145deg, var(--rose-lt), var(--sage-lt));
+      border: 2px dashed var(--rose);
+      border-radius: 1.75rem;
+      color: var(--muted); font-size: 12px; text-align: center;
+      padding: 16px;
+    }
+    .photo-placeholder .ph-icon {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: white; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 18px; border: 1.5px solid var(--rose);
+    }
+    /* Use this class on <img> after replacing placeholder */
+    .photo-real {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      border-radius: 1.75rem; display: block;
+    }
+
+    /* Divider */
+    .divider-rose {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--rose), transparent);
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      border: 1px solid rgba(244, 167, 185, 0.25);
+      border-radius: 1.25rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(244, 167, 185, 0.18);
+    }
+    .skill-icon {
+      width: 46px; height: 46px; border-radius: 12px;
+      background: var(--rose-lt); display: flex;
+      align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+
+    /* Timeline */
+    .tl-dot {
+      width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0;
+      background: var(--rose); border: 2px solid white;
+      box-shadow: 0 0 0 3px var(--rose-lt); margin-top: 4px;
+    }
+    .tl-line { width: 1.5px; flex-grow: 1; margin: 6px auto 0; background: var(--rose-lt); }
+
+    /* Contact links */
+    .contact-link {
+      display: flex; align-items: center; gap: 16px;
+      padding: 18px 22px; border-radius: 1.25rem;
+      text-decoration: none; color: white;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .contact-link:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateX(4px);
+    }
+    .c-icon {
+      width: 46px; height: 46px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+
+    /* Fade-up animation */
+    .fade-up {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* Back to top */
+    #btt {
+      position: fixed; bottom: 28px; right: 28px;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--rose); color: white; font-size: 18px;
+      border: none; cursor: none; z-index: 100;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(244,167,185,0.45);
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s, transform 0.2s;
+    }
+    #btt.show { opacity: 1; pointer-events: auto; }
+    #btt:hover { transform: scale(1.1); }
+
+    /* Section wave */
+    .wave svg { display: block; }
+
+    /* Progress bars */
+    .prog-bar {
+      height: 4px; border-radius: 99px;
+      background: var(--rose-lt); margin-top: 12px; overflow: hidden;
+    }
+    .prog-fill {
+      height: 100%; border-radius: 99px;
+      background: linear-gradient(90deg, var(--rose), var(--mauve));
+      transition: width 1.2s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Cursor -->
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="cur-ring"></div>
+
+<!-- Back to top -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Kembali ke atas">↑</button>
+
+<!-- ══════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════ -->
+<header>
+  <nav class="glass-nav fixed w-full z-50" role="navigation" aria-label="Navigasi utama">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="font-display text-2xl font-light tracking-widest" style="color:var(--mauve-dk)">
+        Melyka<span style="color:var(--rose)">.</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.13em] font-medium" style="color:var(--muted)">
+        <a href="#about"      class="hover:text-pink-400 transition-colors">Tentang</a>
+        <a href="#skills"     class="hover:text-pink-400 transition-colors">Keahlian</a>
+        <a href="#experience" class="hover:text-pink-400 transition-colors">Pengalaman</a>
+        <a href="#education"  class="hover:text-pink-400 transition-colors">Pendidikan</a>
+        <a href="#contact"    class="hover:text-pink-400 transition-colors">Kontak</a>
+      </div>
+      <button id="mob-btn" class="md:hidden p-2 flex flex-col gap-1.5"
+              onclick="document.getElementById('mob-menu').classList.toggle('hidden')"
+              aria-label="Buka menu mobile">
+        <span class="w-5 h-0.5 rounded" style="background:var(--mauve-dk)"></span>
+        <span class="w-5 h-0.5 rounded" style="background:var(--mauve-dk)"></span>
+        <span class="w-5 h-0.5 rounded" style="background:var(--mauve-dk)"></span>
+      </button>
+    </div>
+    <div id="mob-menu" class="hidden md:hidden flex-col px-6 pb-5 pt-2 gap-3 text-[12px] uppercase tracking-widest font-medium border-t"
+         style="background:rgba(253,240,244,0.97); border-color:rgba(244,167,185,0.2); color:var(--muted)">
+      <a href="#about"      onclick="document.getElementById('mob-menu').classList.add('hidden')" class="py-2 border-b" style="border-color:var(--rose-lt)">Tentang</a>
+      <a href="#skills"     onclick="document.getElementById('mob-menu').classList.add('hidden')" class="py-2 border-b" style="border-color:var(--rose-lt)">Keahlian</a>
+      <a href="#experience" onclick="document.getElementById('mob-menu').classList.add('hidden')" class="py-2 border-b" style="border-color:var(--rose-lt)">Pengalaman</a>
+      <a href="#education"  onclick="document.getElementById('mob-menu').classList.add('hidden')" class="py-2 border-b" style="border-color:var(--rose-lt)">Pendidikan</a>
+      <a href="#contact"    onclick="document.getElementById('mob-menu').classList.add('hidden')" class="py-2">Kontak</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden" style="background:var(--blush); padding-top:80px">
+  <div class="blob w-96 h-96" style="background:var(--rose); top:-100px; left:-100px"></div>
+  <div class="blob w-72 h-72" style="background:var(--sage); bottom:-40px; right:-60px"></div>
+  <div class="blob w-48 h-48" style="background:var(--mauve); top:50%; left:40%"></div>
+
+  <div class="max-w-6xl mx-auto px-6 py-20 relative z-10 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Text -->
+      <div class="fade-up order-2 lg:order-1">
+        <span class="pill mb-6">✦ Purchasing · Sekretaris · Jakarta</span>
+
+        <h1 class="font-display mb-5" style="font-size:clamp(3rem,8vw,5.5rem); font-weight:300; line-height:1.06; color:var(--text)">
+          Halo, saya<br>
+          <em style="color:var(--mauve-dk)">Melyka</em>
+        </h1>
+
+        <p class="leading-relaxed mb-8 max-w-md" style="color:var(--muted); font-size:15px">
+          Profesional di bidang <strong style="color:var(--mauve-dk); font-weight:500">Purchasing</strong> dan
+          <strong style="color:var(--mauve-dk); font-weight:500">Sekretaris</strong> dengan pengalaman
+          di industri F&amp;B kawasan PIK2, Jakarta. Terampil mengelola pengadaan,
+          administrasi, dan koordinasi lintas departemen.
+        </p>
+
+        <div class="flex flex-wrap gap-3 mb-12">
+          <a href="#contact"
+             class="px-7 py-3 rounded-full text-sm font-medium text-white transition-opacity hover:opacity-85"
+             style="background:var(--rose)">
+            Hubungi Saya
+          </a>
+          <a href="assets/CV-Melyka.pdf" download
+             class="px-7 py-3 rounded-full text-sm font-medium border transition-colors hover:bg-white"
+             style="border-color:var(--rose); color:var(--mauve-dk)">
+            ↓ Download CV
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="flex gap-8 items-center">
+          <div>
+            <p class="font-display text-3xl" style="color:var(--mauve-dk); font-weight:300">F&amp;B</p>
+            <p class="text-[10px] uppercase tracking-widest mt-0.5" style="color:var(--muted)">Industri</p>
+          </div>
+          <div class="h-8 w-px" style="background:var(--rose-lt)"></div>
+          <div>
+            <p class="font-display text-3xl" style="color:var(--mauve-dk); font-weight:300">PIK2</p>
+            <p class="text-[10px] uppercase tracking-widest mt-0.5" style="color:var(--muted)">Lokasi Kerja</p>
+          </div>
+          <div class="h-8 w-px" style="background:var(--rose-lt)"></div>
+          <div>
+            <p class="font-display text-3xl" style="color:var(--mauve-dk); font-weight:300">JKT</p>
+            <p class="text-[10px] uppercase tracking-widest mt-0.5" style="color:var(--muted)">Domisili</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOTO 1 -->
+      <div class="fade-up order-1 lg:order-2 flex justify-center lg:justify-end">
+        <div class="relative">
+          <!--
+          ╔═══════════════════════════════════════════════════════════╗
+          ║  FOTO 1 — HERO (dominan, penuh, kesan pertama)            ║
+          ║  Ukuran ideal : 360 × 500px  (portrait / full body)       ║
+          ║                                                            ║
+          ║  CARA GANTI:                                               ║
+          ║  1. Hapus seluruh <div class="photo-placeholder"> ini     ║
+          ║  2. Ganti dengan kode di bawah:                           ║
+          ║                                                            ║
+          ║  <img src="assets/photo-1.jpg"                            ║
+          ║       alt="Melyka — Purchasing & Sekretaris Jakarta"       ║
+          ║       class="photo-real"                                   ║
+          ║       style="width:320px; height:460px"                   ║
+          ║       width="360" height="500"                            ║
+          ║       loading="eager">                                     ║
+          ║                                                            ║
+          ║  3. Simpan file foto di folder: assets/photo-1.jpg        ║
+          ╚═══════════════════════════════════════════════════════════╝
+          -->
+          <div class="photo-placeholder" style="width:300px; height:420px; max-width:90vw">
+            <div class="ph-icon">📷</div>
+            <strong style="color:var(--mauve-dk)">FOTO 1 — HERO</strong>
+            <p>Portrait full body<br><span style="opacity:.7">360 × 500px</span></p>
+            <code style="font-size:10px; opacity:.6; background:white; padding:2px 6px; border-radius:4px">assets/photo-1.jpg</code>
+          </div>
+          <!-- Decorative elements -->
+          <div class="absolute -bottom-5 -left-5 w-32 h-32 rounded-3xl -z-10" style="background:var(--sage-lt); border:1px solid var(--sage)"></div>
+          <div class="absolute -top-5 -right-5 w-20 h-20 rounded-full -z-10" style="background:var(--rose-lt); border:1px solid rgba(244,167,185,.4)"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Wave -->
+  <div class="wave absolute bottom-0 left-0 w-full pointer-events-none">
+    <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:56px;width:100%">
+      <path d="M0,28 C480,56 960,0 1440,28 L1440,56 L0,56 Z" fill="#fdf9f6"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════ -->
+<section id="about" class="py-24 relative" style="background:var(--sand)">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- FOTO 2 -->
+      <div class="fade-up relative flex justify-center lg:justify-start order-2 lg:order-1">
+        <!--
+        ╔═══════════════════════════════════════════════════════════╗
+        ║  FOTO 2 — ABOUT (kasual, ekspresi hangat)                 ║
+        ║  Ukuran ideal : 300 × 400px                               ║
+        ║                                                            ║
+        ║  CARA GANTI:                                               ║
+        ║  Hapus <div class="photo-placeholder"> ini, ganti dengan: ║
+        ║  <img src="assets/photo-2.jpg"                            ║
+        ║       alt="Melyka — Tentang Saya"                         ║
+        ║       class="photo-real"                                   ║
+        ║       style="width:280px; height:380px"                   ║
+        ║       width="300" height="400" loading="lazy">            ║
+        ╚═══════════════════════════════════════════════════════════╝
+        -->
+        <div class="relative">
+          <div class="photo-placeholder" style="width:280px; height:370px; max-width:90vw">
+            <div class="ph-icon">📷</div>
+            <strong style="color:var(--mauve-dk)">FOTO 2 — ABOUT</strong>
+            <p>Portrait kasual/hangat<br><span style="opacity:.7">300 × 400px</span></p>
+            <code style="font-size:10px; opacity:.6; background:white; padding:2px 6px; border-radius:4px">assets/photo-2.jpg</code>
+          </div>
+          <div class="blob absolute -z-10 w-56 h-56" style="background:var(--sage); bottom:-20px; right:-20px; border-radius:60% 40% 70% 30%"></div>
+          <!-- Floating chip -->
+          <div class="absolute -bottom-6 -right-4 px-4 py-3 rounded-2xl shadow-md"
+               style="background:white; border:1px solid rgba(244,167,185,.25)">
+            <p class="text-xs font-medium" style="color:var(--mauve-dk)">📍 Jakarta, Indonesia</p>
+            <p class="text-[10px] mt-0.5" style="color:var(--muted)">Open to opportunities</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="fade-up order-1 lg:order-2">
+        <span class="pill mb-5">Tentang Saya</span>
+        <h2 class="font-display mb-6" style="font-size:clamp(1.8rem,4.5vw,2.8rem); font-weight:300; color:var(--text)">
+          Terorganisir, Detail,<br><em style="color:var(--mauve-dk)">&amp; Adaptif</em>
+        </h2>
+
+        <div class="space-y-4 pl-4" style="border-left:2px solid var(--rose-lt)">
+          <p style="color:var(--muted); font-size:15px; line-height:1.8">
+            Saya adalah seorang profesional yang berdedikasi di bidang
+            <strong style="color:var(--text); font-weight:500">purchasing</strong> dan
+            <strong style="color:var(--text); font-weight:500">administrasi perkantoran</strong>,
+            dengan latar belakang pendidikan SMK Administrasi Perkantoran.
+          </p>
+          <p style="color:var(--muted); font-size:15px; line-height:1.8">
+            Saat ini berperan sebagai
+            <strong style="color:var(--text); font-weight:500">Purchasing Staff</strong>
+            di sebuah perusahaan F&amp;B di kawasan PIK2 Jakarta — bertanggung jawab
+            dalam pengadaan bahan baku, negosiasi vendor, serta memastikan kelancaran
+            operasional dari sisi logistik.
+          </p>
+          <p style="color:var(--muted); font-size:15px; line-height:1.8">
+            Saya percaya ketelitian, komunikasi yang baik, dan kemampuan multitasking
+            adalah kunci dalam mendukung operasional bisnis yang efisien.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2 mt-7">
+          <span class="pill">✓ Detail-Oriented</span>
+          <span class="pill">✓ Fast Learner</span>
+          <span class="pill">✓ Team Player</span>
+          <span class="pill">✓ Komunikatif</span>
+          <span class="pill">✓ Multitasking</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SKILLS
+══════════════════════════════════════════ -->
+<section id="skills" class="py-24 relative overflow-hidden" style="background:var(--blush)">
+  <div class="blob w-80 h-80" style="background:var(--rose); right:-80px; top:-60px"></div>
+  <div class="blob w-64 h-64" style="background:var(--sage); left:-60px; bottom:-40px"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-14 fade-up">
+      <span class="pill mb-4">Keahlian</span>
+      <h2 class="font-display" style="font-size:clamp(1.8rem,4.5vw,2.8rem); font-weight:300; color:var(--text)">
+        Yang Saya <em style="color:var(--mauve-dk)">Kuasai</em>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <article class="card p-5 fade-up">
+        <div class="skill-icon mb-4">🛒</div>
+        <h3 class="font-medium text-sm mb-2" style="color:var(--text)">Purchasing &amp; Procurement</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--muted)">Pengadaan bahan baku, pembuatan PO, dan kontrol anggaran pembelian.</p>
+        <div class="prog-bar"><div class="prog-fill" data-w="88" style="width:0%"></div></div>
+      </article>
+
+      <article class="card p-5 fade-up">
+        <div class="skill-icon mb-4">🤝</div>
+        <h3 class="font-medium text-sm mb-2" style="color:var(--text)">Vendor Management</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--muted)">Negosiasi harga, evaluasi supplier, dan hubungan vendor jangka panjang.</p>
+        <div class="prog-bar"><div class="prog-fill" data-w="82" style="width:0%"></div></div>
+      </article>
+
+      <article class="card p-5 fade-up">
+        <div class="skill-icon mb-4">📋</div>
+        <h3 class="font-medium text-sm mb-2" style="color:var(--text)">Administrasi &amp; Sekretaris</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--muted)">Pengelolaan dokumen, penjadwalan, notulen, dan korespondensi resmi.</p>
+        <div class="prog-bar"><div class="prog-fill" data-w="90" style="width:0%"></div></div>
+      </article>
+
+      <article class="card p-5 fade-up">
+        <div class="skill-icon mb-4">📊</div>
+        <h3 class="font-medium text-sm mb-2" style="color:var(--text)">Microsoft Office</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--muted)">Excel (rekap data), Word (surat resmi), PowerPoint (presentasi).</p>
+        <div class="prog-bar"><div class="prog-fill" data-w="85" style="width:0%"></div></div>
+      </article>
+
+      <article class="card p-5 fade-up">
+        <div class="skill-icon mb-4">📦</div>
+        <h3 class="font-medium text-sm mb-2" style="color:var(--text)">Inventory Control</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--muted)">Pemantauan stok, laporan penerimaan barang, koordinasi gudang.</p>
+        <div class="prog-bar"><div class="prog-fill" data-w="78" style="width:0%"></div></div>
+      </article>
+
+      <article class="card p-5 fade-up">
+        <div class="skill-icon mb-4">💬</div>
+        <h3 class="font-medium text-sm mb-2" style="color:var(--text)">Komunikasi &amp; Koordinasi</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--muted)">Koordinasi antar departemen, follow-up vendor, dan pelaporan ke manajemen.</p>
+        <div class="prog-bar"><div class="prog-fill" data-w="86" style="width:0%"></div></div>
+      </article>
+
+      <article class="card p-5 fade-up">
+        <div class="skill-icon mb-4">📁</div>
+        <h3 class="font-medium text-sm mb-2" style="color:var(--text)">Document Control</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--muted)">Pengarsipan digital &amp; fisik, SOP, kontrak, dan dokumen pengadaan.</p>
+        <div class="prog-bar"><div class="prog-fill" data-w="83" style="width:0%"></div></div>
+      </article>
+
+      <article class="card p-5 fade-up">
+        <div class="skill-icon mb-4">🍽️</div>
+        <h3 class="font-medium text-sm mb-2" style="color:var(--text)">F&amp;B Operations</h3>
+        <p class="text-xs leading-relaxed" style="color:var(--muted)">Pemahaman operasional F&amp;B, kebutuhan bahan baku, alur supply chain restoran.</p>
+        <div class="prog-bar"><div class="prog-fill" data-w="80" style="width:0%"></div></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     EXPERIENCE
+══════════════════════════════════════════ -->
+<section id="experience" class="py-24" style="background:var(--sand)">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-14 fade-up">
+      <span class="pill mb-4">Pengalaman Kerja</span>
+      <h2 class="font-display" style="font-size:clamp(1.8rem,4.5vw,2.8rem); font-weight:300; color:var(--text)">
+        Perjalanan <em style="color:var(--mauve-dk)">Karir</em>
+      </h2>
+    </div>
+
+    <div>
+      <!-- Job 1 -->
+      <article class="flex gap-5 fade-up">
+        <div class="flex flex-col items-center">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="pb-10 flex-1">
+          <div class="card p-6">
+            <div class="flex flex-wrap justify-between gap-3 mb-3">
+              <div>
+                <span class="pill text-[10px] mb-2">Posisi Saat Ini</span>
+                <h3 class="font-medium mt-2" style="color:var(--text); font-size:16px">Purchasing Staff</h3>
+                <p class="text-sm mt-0.5" style="color:var(--mauve-dk)">Industri F&amp;B · PIK2, Jakarta Utara</p>
+              </div>
+              <div class="text-right text-xs" style="color:var(--muted)">
+                <p>📍 PIK2, Jakarta</p>
+                <p class="mt-1">Full-time</p>
+              </div>
+            </div>
+            <div class="divider-rose my-4"></div>
+            <ul class="space-y-2.5">
+              <li class="flex gap-2 text-xs" style="color:var(--muted)"><span style="color:var(--rose); flex-shrink:0">◆</span>Melakukan pengadaan bahan baku dan supplies untuk kebutuhan operasional F&amp;B</li>
+              <li class="flex gap-2 text-xs" style="color:var(--muted)"><span style="color:var(--rose); flex-shrink:0">◆</span>Negosiasi harga dan kontrak dengan supplier untuk efisiensi biaya operasional</li>
+              <li class="flex gap-2 text-xs" style="color:var(--muted)"><span style="color:var(--rose); flex-shrink:0">◆</span>Monitoring stok dan koordinasi dengan tim gudang &amp; dapur</li>
+              <li class="flex gap-2 text-xs" style="color:var(--muted)"><span style="color:var(--rose); flex-shrink:0">◆</span>Membuat laporan pembelian dan rekap pengeluaran bulanan</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Job 2 -->
+      <article class="flex gap-5 fade-up">
+        <div class="flex flex-col items-center">
+          <div class="tl-dot" style="background:var(--mauve); box-shadow:0 0 0 3px rgba(201,168,184,.2)"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="pb-10 flex-1">
+          <div class="card p-6">
+            <div class="flex flex-wrap justify-between gap-3 mb-3">
+              <div>
+                <span class="pill text-[10px] mb-2">Pengalaman</span>
+                <h3 class="font-medium mt-2" style="color:var(--text); font-size:16px">Sekretaris</h3>
+                <p class="text-sm mt-0.5" style="color:var(--mauve-dk)">Administrasi &amp; Kesekretariatan · Jakarta</p>
+              </div>
+              <div class="text-right text-xs" style="color:var(--muted)">
+                <p>📍 Jakarta</p>
+                <p class="mt-1">Full-time</p>
+              </div>
+            </div>
+            <div class="divider-rose my-4"></div>
+            <ul class="space-y-2.5">
+              <li class="flex gap-2 text-xs" style="color:var(--muted)"><span style="color:var(--mauve); flex-shrink:0">◆</span>Mengelola jadwal, agenda, dan korespondensi pimpinan</li>
+              <li class="flex gap-2 text-xs" style="color:var(--muted)"><span style="color:var(--mauve); flex-shrink:0">◆</span>Menyiapkan dokumen, notulen rapat, dan laporan berkala</li>
+              <li class="flex gap-2 text-xs" style="color:var(--muted)"><span style="color:var(--mauve); flex-shrink:0">◆</span>Pengarsipan dan pengelolaan dokumen perusahaan secara sistematis</li>
+              <li class="flex gap-2 text-xs" style="color:var(--muted)"><span style="color:var(--mauve); flex-shrink:0">◆</span>Koordinasi dengan tamu, klien, dan lintas departemen</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Placeholder for more -->
+      <div class="flex gap-5 fade-up">
+        <div class="flex flex-col items-center">
+          <div class="tl-dot" style="background:var(--sage-lt); border-color:var(--sage); box-shadow:0 0 0 3px rgba(212,227,208,.2)"></div>
+        </div>
+        <div class="pb-2 pt-1 flex-1">
+          <p class="text-xs italic" style="color:var(--muted)">✦ Tambahkan pengalaman lain bila ada</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     EDUCATION + FOTO 3
+══════════════════════════════════════════ -->
+<section id="education" class="py-24 relative overflow-hidden" style="background:var(--blush)">
+  <div class="blob w-64 h-64" style="background:var(--mauve); left:-40px; top:0"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-14 fade-up">
+      <span class="pill mb-4">Pendidikan</span>
+      <h2 class="font-display" style="font-size:clamp(1.8rem,4.5vw,2.8rem); font-weight:300; color:var(--text)">
+        Latar Belakang <em style="color:var(--mauve-dk)">Akademik</em>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Card -->
+      <div class="fade-up order-2 lg:order-1">
+        <div class="card p-8">
+          <div class="skill-icon mb-5" style="width:54px; height:54px; border-radius:14px; font-size:24px">🎓</div>
+          <h3 class="font-display text-2xl font-light mb-1" style="color:var(--text)">SMK</h3>
+          <p class="font-medium mb-4" style="color:var(--mauve-dk)">Jurusan Administrasi Perkantoran</p>
+          <div class="divider-rose mb-5"></div>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-sm" style="color:var(--muted)"><span style="color:var(--rose); flex-shrink:0">◆</span>Korespondensi bisnis dan surat-menyurat resmi</li>
+            <li class="flex gap-3 text-sm" style="color:var(--muted)"><span style="color:var(--rose); flex-shrink:0">◆</span>Manajemen kearsipan dan dokumentasi</li>
+            <li class="flex gap-3 text-sm" style="color:var(--muted)"><span style="color:var(--rose); flex-shrink:0">◆</span>Otomasi perkantoran dan aplikasi komputer bisnis</li>
+            <li class="flex gap-3 text-sm" style="color:var(--muted)"><span style="color:var(--rose); flex-shrink:0">◆</span>Manajemen rapat dan acara perusahaan</li>
+            <li class="flex gap-3 text-sm" style="color:var(--muted)"><span style="color:var(--rose); flex-shrink:0">◆</span>Etika profesi dan komunikasi bisnis</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FOTO 3 -->
+      <div class="fade-up order-1 lg:order-2 flex justify-center">
+        <!--
+        ╔═══════════════════════════════════════════════════════════╗
+        ║  FOTO 3 — EDUCATION (formal, rapi)                        ║
+        ║  Ukuran ideal : 300 × 400px                               ║
+        ║                                                            ║
+        ║  CARA GANTI:                                               ║
+        ║  Hapus <div class="photo-placeholder"> ini, ganti dengan: ║
+        ║  <img src="assets/photo-3.jpg"                            ║
+        ║       alt="Melyka — Pendidikan"                           ║
+        ║       class="photo-real"                                   ║
+        ║       style="width:260px; height:350px"                   ║
+        ║       width="300" height="400" loading="lazy">            ║
+        ╚═══════════════════════════════════════════════════════════╝
+        -->
+        <div class="relative">
+          <div class="photo-placeholder" style="width:260px; height:350px; max-width:90vw">
+            <div class="ph-icon">📷</div>
+            <strong style="color:var(--mauve-dk)">FOTO 3 — EDUCATION</strong>
+            <p>Portrait formal/rapi<br><span style="opacity:.7">300 × 400px</span></p>
+            <code style="font-size:10px; opacity:.6; background:white; padding:2px 6px; border-radius:4px">assets/photo-3.jpg</code>
+          </div>
+          <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl -z-10" style="background:var(--sage-lt); border:1px solid var(--sage)"></div>
+          <div class="absolute -top-4 -left-4 w-16 h-16 rounded-full -z-10" style="background:var(--rose-lt); border:1px solid rgba(244,167,185,.4)"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CONTACT + FOTO 4
+══════════════════════════════════════════ -->
+<section id="contact" class="py-24 relative overflow-hidden" style="background:var(--dark)">
+  <div class="blob w-80 h-80 opacity-[0.12]" style="background:var(--rose); right:-60px; bottom:-40px"></div>
+  <div class="blob w-60 h-60 opacity-[0.10]" style="background:var(--sage); left:-40px; top:-20px"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Text & links -->
+      <div class="fade-up">
+        <span class="pill mb-5" style="background:rgba(244,167,185,.12); color:var(--rose); border-color:rgba(244,167,185,.25)">Kontak</span>
+        <h2 class="font-display mb-3" style="font-size:clamp(1.8rem,4.5vw,2.8rem); font-weight:300; color:white">
+          Mari <em style="color:var(--rose)">Terhubung</em>
+        </h2>
+        <p class="text-sm leading-relaxed mb-10" style="color:rgba(255,255,255,.45)">
+          Terbuka untuk diskusi peluang kerja, kolaborasi, atau sekadar berbagi
+          pengalaman profesional. Hubungi saya kapan saja!
+        </p>
+
+        <div class="space-y-4">
+
+          <!-- Email — ganti email@gmail.com -->
+          <a href="mailto:email@gmail.com" class="contact-link" aria-label="Kirim email ke Melyka">
+            <div class="c-icon" style="background:rgba(244,167,185,.14)">📧</div>
+            <div class="flex-1">
+              <p class="text-[10px] uppercase tracking-widest mb-1" style="color:rgba(255,255,255,.35)">Email</p>
+              <p class="text-sm font-medium">email@gmail.com</p>
+            </div>
+            <span style="color:rgba(255,255,255,.25)">→</span>
+          </a>
+
+          <!-- WhatsApp — ganti nomor -->
+          <a href="https://wa.me/628XXXXXXXXXX?text=Halo%20Melyka,%20saya%20ingin%20terhubung"
+             target="_blank" rel="noopener noreferrer"
+             class="contact-link" aria-label="Hubungi Melyka via WhatsApp">
+            <div class="c-icon" style="background:rgba(37,211,102,.14)">💬</div>
+            <div class="flex-1">
+              <p class="text-[10px] uppercase tracking-widest mb-1" style="color:rgba(255,255,255,.35)">WhatsApp</p>
+              <p class="text-sm font-medium">+62 8XX-XXXX-XXXX</p>
+            </div>
+            <span style="color:rgba(255,255,255,.25)">→</span>
+          </a>
+
+          <!-- Instagram — ganti username -->
+          <a href="https://instagram.com/username_melyka"
+             target="_blank" rel="noopener noreferrer"
+             class="contact-link" aria-label="Follow Instagram Melyka">
+            <div class="c-icon" style="background:rgba(225,48,108,.14)">📸</div>
+            <div class="flex-1">
+              <p class="text-[10px] uppercase tracking-widest mb-1" style="color:rgba(255,255,255,.35)">Instagram</p>
+              <p class="text-sm font-medium">@username_melyka</p>
+            </div>
+            <span style="color:rgba(255,255,255,.25)">→</span>
+          </a>
+
+        </div>
+
+        <div class="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-full"
+             style="background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.09)">
+          <span>📍</span>
+          <span class="text-sm" style="color:rgba(255,255,255,.45)">Jakarta, Indonesia · WFO &amp; WFH Ready</span>
+        </div>
+      </div>
+
+      <!-- FOTO 4 -->
+      <div class="fade-up flex justify-center lg:justify-end">
+        <!--
+        ╔═══════════════════════════════════════════════════════════╗
+        ║  FOTO 4 — CONTACT (hangat, senyum, kesan penutup)         ║
+        ║  Ukuran ideal : 300 × 420px                               ║
+        ║                                                            ║
+        ║  CARA GANTI:                                               ║
+        ║  Hapus <div class="photo-placeholder"> ini, ganti dengan: ║
+        ║  <img src="assets/photo-4.jpg"                            ║
+        ║       alt="Melyka — Hubungi Saya"                         ║
+        ║       class="photo-real"                                   ║
+        ║       style="width:280px; height:380px"                   ║
+        ║       width="300" height="420" loading="lazy">            ║
+        ╚═══════════════════════════════════════════════════════════╝
+        -->
+        <div class="relative">
+          <div class="photo-placeholder" style="width:270px; height:370px; max-width:90vw; border-color:rgba(244,167,185,.4)">
+            <div class="ph-icon" style="background:rgba(244,167,185,.15); border-color:rgba(244,167,185,.4)">📷</div>
+            <strong style="color:var(--rose)">FOTO 4 — CONTACT</strong>
+            <p style="color:rgba(255,255,255,.5)">Portrait hangat/senyum<br><span style="opacity:.7">300 × 420px</span></p>
+            <code style="font-size:10px; color:rgba(255,255,255,.35); background:rgba(255,255,255,.1); padding:2px 8px; border-radius:4px">assets/photo-4.jpg</code>
+          </div>
+          <!-- Glow -->
+          <div class="absolute inset-0 rounded-3xl -z-10" style="box-shadow:0 0 70px rgba(244,167,185,.18); transform:scale(1.06)"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer class="py-10 text-center" style="background:#1e1520" role="contentinfo">
+  <p class="font-display text-2xl font-light mb-2" style="color:rgba(255,255,255,.65)">
+    Melyka<span style="color:var(--rose)">.</span>
+  </p>
+  <p class="text-xs mb-6" style="color:rgba(255,255,255,.25)">Purchasing · Sekretaris · Jakarta, Indonesia</p>
+  <nav class="flex justify-center flex-wrap gap-6 text-[10px] uppercase tracking-widest mb-6" aria-label="Footer navigation"
+       style="color:rgba(255,255,255,.25)">
+    <a href="#about"      class="hover:text-pink-300 transition-colors">Tentang</a>
+    <a href="#skills"     class="hover:text-pink-300 transition-colors">Keahlian</a>
+    <a href="#experience" class="hover:text-pink-300 transition-colors">Pengalaman</a>
+    <a href="#education"  class="hover:text-pink-300 transition-colors">Pendidikan</a>
+    <a href="#contact"    class="hover:text-pink-300 transition-colors">Kontak</a>
+  </nav>
+  <p class="text-[10px]" style="color:rgba(255,255,255,.15)">&copy; 2026 Melyka · Portfolio Profesional · Jakarta</p>
+</footer>
+
+<!-- ══════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════ -->
+<script>
+  /* Custom cursor */
+  const cur = document.getElementById('cur');
+  const ring = document.getElementById('cur-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  (function loop() {
+    cur.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`;
+    rx += (mx - rx) * 0.1; ry += (my - ry) * 0.1;
+    ring.style.transform = `translate(${rx}px,${ry}px) translate(-50%,-50%)`;
+    requestAnimationFrame(loop);
+  })();
+
+  /* Intersection Observer — fade-up */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+  /* Animate progress bars when visible */
+  const pio = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.prog-fill').forEach(bar => {
+          bar.style.width = bar.dataset.w + '%';
+        });
+        pio.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('#skills').forEach(el => pio.observe(el));
+
+  /* Back to top */
+  const btt = document.getElementById('btt');
+  window.addEventListener('scroll', () => btt.classList.toggle('show', scrollY > 500));
+</script>
+
+</body>
+</html>
